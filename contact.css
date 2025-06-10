@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --fond: #fff;
+}
+
+body {
+    background-color: rgb(237, 237, 237);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headers {
+    background-color: rgb(254, 242, 242);
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    max-width: 1920px;
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+}
+
+.logo {
+    width: 110px;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation li {
+    margin-left: 30px;
+    list-style: none;
+}
+
+.navigation li:nth-child(1) {
+    margin-left: 0px;
+}
+
+.pnav {
+    cursor: pointer;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pnav:hover {
+    transition: all .3s;
+    color: rgb(230, 1, 1);
+}
+
+.cart {
+    position: relative;
+}
+
+.imgCart {
+    width: 30px;
+    height: 30px;
+}
+
+.countCart {
+    position: absolute;
+    top: -11px;
+    right: -10px;
+    background-color: red;
+    color: var(--fond);
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.namesit {
+    transform: scale(0);
+    opacity: 0;
+    background-color: rgb(0, 0, 0);
+    color: var(--fond);
+    margin-top: 120px;
+    font-size: 33px;
+    letter-spacing: 1px;
+    padding: 20px 50px;
+    text-align: center;
+    border-radius: 40px;
+    text-shadow: 0 0 3px red;
+}
+
+.namesit.active {
+    transition: all .7s ease;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.section-contact {
+    margin-top: 60px;
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.left-block {
+    transform: translateX(-100%);
+    opacity: 0;
+    background-color: black;
+    max-width: 762px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.left-block.active {
+    transition: all 1s ease-in-out;
+    transform: translateX(0);
+    opacity: 1;
+} 
+
+.right-block {
+    opacity: 0;
+    padding: 0 30px;
+    background-color: black;
+    max-width: 762px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(67, 78, 138);
+}
+
+.right-block.active {
+    transition: all 1s;
+    opacity: 1;
+}
+
+.imgBanner {
+    width: 100%;
+    object-fit: contain;
+}
+
+.text-lorem {
+    transform: translateX(100%);
+    opacity: 0;
+    color: rgb(224, 195, 34);
+    font-size: 32px;
+    letter-spacing: 2px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.text-lorem.active {
+    transition: all 2s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+strong {
+    color: rgb(255, 255, 255);
+}
+
+.moreInfo {
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 220px;
+    margin-top: 60px;
+}
+
+.text-moreinfo {
+    padding: 4px 20px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.text-moreinfo:hover {
+    transition: all .4s;
+    transform: scale(1.1);
+}
+
+.info {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 10px 20px;
+}
+
+.info.active {
+    display: flex;
+}
+
+.text-moreinfo:nth-child(1) {
+    list-style: none;
+}
+
+.li-moreinfo {
+    list-style: none;
+    text-align: center;
+    width: 75%;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    max-width: 1920px;
+    width: 100%;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.ulfooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.ulfooter li {
+    cursor: pointer;
+    color: #9d9d9d;
+    list-style: none;
+    font-size: 18px;
+}
+
+.footer p {
+    color:  #9d9d9d;
+}
+
+@media (max-width: 1300px) {
+    
+    .text-lorem {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-block {
+        width: 100%;
+        padding: 45px;
+    }
+
+    .li-moreinfo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 682px) {
+
+    .div-up {
+        justify-content: center;
+    }
+
+    .totalPrice {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .price, .counters button {
+        font-size: 14px;
+        padding: 3px 6px;
+    }
+
+    .counters {
+        width: 70px;
+        height: 25px;
+    }
+
+    .counters button {
+        width: 20px;
+        height: 25px;
+    }
+
+    .inputCount {
+        width: 30px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 491px) {
+
+    .headers {
+        justify-content: center;
+    }
+    
+    .navigation li {
+        margin-left: 10px;
+    }
+
+    .pnav {
+        font-size: 16px;
+    }
+
+    .box-form {
+        margin-bottom: 184px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .container {
+        min-height: 900px;
+    }
+
+    .card {
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .center-img {
+        width: 199px;
+        height: 130px;
+    }
+
+    .price, .counters button {
+        font-size: 17px;
+        padding: 3px 6px;
+    }
+
+    .btnDelet {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .text-lorem {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 368px) {
+    
+    .text-lorem {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
